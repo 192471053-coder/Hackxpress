@@ -14,7 +14,7 @@ export const hackxpressConfig = {
     // EDITABLE FIELDS BELOW:
     eventDate: "[ADD DATE]", // Set ISO string or human date e.g. "October 24, 2026" for countdown
     registrationFee: "[ADD FEE]",
-    registrationUrl: "https://forms.google.com", // Official Google Form URL placeholder
+    registrationUrl: "https://forms.gle/93meyStqPx67kUvc8",
     teamSize: "[ADD FINAL TEAM SIZE]",
     priorExperienceRequired: "[YES/NO]",
   },
@@ -37,22 +37,26 @@ export const hackxpressConfig = {
       {
         title: "HACK ON THE MOVE",
         description: "Build your solution while travelling aboard a train.",
-        icon: "Train"
+        icon: "Train",
+        contextPhrase: "BUILD WHILE TRAVELLING"
       },
       {
         title: "REAL-WORLD INNOVATION",
         description: "Solve meaningful problems using technology and creativity.",
-        icon: "Cpu"
+        icon: "Cpu",
+        contextPhrase: "SOLVE REAL PROBLEMS"
       },
       {
         title: "COLLABORATE",
         description: "Meet students, developers, designers and innovators.",
-        icon: "Users"
+        icon: "Users",
+        contextPhrase: "MEET & COLLABORATE"
       },
       {
         title: "JOURNEY TO PONDICHERRY",
         description: "A hackathon experience unlike anything you've experienced before.",
-        icon: "Compass"
+        icon: "Compass",
+        contextPhrase: "COMPLETE YOUR JOURNEY"
       }
     ]
   },
@@ -78,121 +82,106 @@ export const hackxpressConfig = {
         id: "trans",
         name: "Smart Transportation",
         symbol: "🚀",
-        context: "Explore technology that can make railway and public transportation smarter, faster and more efficient.",
+        context: "Make railway and public transportation smarter, faster and more efficient.",
         possibleAreas: [
           "intelligent route optimization",
-          "predictive transportation systems",
-          "real-time movement tracking",
+          "real-time tracking",
           "smart scheduling",
-          "traffic and mobility optimization",
-          "AI-powered transportation management"
+          "predictive transportation systems"
         ],
-        closingIdea: "Think smarter mobility. Build better journeys."
+        closingIdea: "THINK SMARTER MOBILITY →"
       },
       {
         id: "safe",
         name: "Passenger Safety",
         symbol: "🛡️",
-        context: "Explore solutions that improve passenger safety and help identify, prevent or respond to risks during railway travel.",
+        context: "Build solutions that improve passenger safety and help identify or respond to travel risks.",
         possibleAreas: [
           "emergency detection",
           "intelligent monitoring",
           "incident alerts",
-          "crowd safety",
-          "risk prediction",
-          "AI-assisted safety systems"
+          "risk prediction"
         ],
-        closingIdea: "Make every journey safer."
+        closingIdea: "MAKE EVERY JOURNEY SAFER →"
       },
       {
         id: "access",
         name: "Accessibility",
         symbol: "♿",
-        context: "Explore technology that makes railway travel more inclusive and accessible for people with different abilities and needs.",
+        context: "Create technology that makes railway travel more inclusive and accessible for people with different needs.",
         possibleAreas: [
           "accessibility assistance",
           "navigation support",
           "inclusive interfaces",
-          "real-time assistance",
-          "accessibility information",
-          "assistive technologies"
+          "assistive technology"
         ],
-        closingIdea: "Design journeys that work for everyone."
+        closingIdea: "DESIGN FOR EVERYONE →"
       },
       {
         id: "waste",
         name: "Waste Management",
         symbol: "♻️",
-        context: "Explore smarter ways to monitor, reduce, collect and manage waste during railway journeys.",
+        context: "Find smarter ways to monitor, reduce, collect and manage waste during railway journeys.",
         possibleAreas: [
           "smart waste monitoring",
           "waste classification",
           "collection optimization",
-          "recycling systems",
-          "waste prediction",
-          "resource-efficient solutions"
+          "recycling systems"
         ],
-        closingIdea: "Turn better waste management into a better journey."
+        closingIdea: "BUILD A CLEANER JOURNEY →"
       },
       {
         id: "energy",
         name: "Energy & Efficiency",
         symbol: "⚡",
-        context: "Explore solutions that help railway systems use energy and resources more efficiently.",
+        context: "Develop solutions that help railway systems use energy and resources more efficiently.",
         possibleAreas: [
           "energy monitoring",
           "intelligent power management",
           "predictive optimization",
-          "resource conservation",
-          "efficient railway operations",
-          "AI-powered energy management"
+          "resource conservation"
         ],
-        closingIdea: "Use less. Optimize more."
+        closingIdea: "OPTIMIZE EVERY JOURNEY →"
       },
       {
         id: "connect",
         name: "Connectivity",
         symbol: "📡",
-        context: "Explore ways technology can improve communication, connectivity and information flow during railway journeys.",
+        context: "Improve communication, connectivity and information flow during railway journeys.",
         possibleAreas: [
           "passenger connectivity",
-          "real-time information systems",
-          "communication infrastructure",
+          "real-time information",
           "intelligent networking",
-          "location-based services",
           "connected railway systems"
         ],
-        closingIdea: "Connect people, systems and journeys."
+        closingIdea: "CONNECT PEOPLE & SYSTEMS →"
       },
       {
         id: "ai",
         name: "AI & Automation",
         symbol: "🤖",
-        context: "Explore how artificial intelligence and automation can transform railway operations and passenger experiences.",
+        context: "Use artificial intelligence and automation to transform railway operations and passenger experiences.",
         possibleAreas: [
           "predictive AI",
           "intelligent assistants",
-          "automated monitoring",
           "computer vision",
           "machine learning",
-          "autonomous decision support"
+          "automated monitoring"
         ],
-        closingIdea: "Teach the journey to think smarter."
+        closingIdea: "MAKE THE JOURNEY SMARTER →"
       },
       {
         id: "exp",
         name: "Passenger Experience",
         symbol: "✨",
-        context: "Explore technology that makes railway journeys more convenient, engaging, personalized and enjoyable.",
+        context: "Create technology that makes railway journeys more convenient, personalized and engaging.",
         possibleAreas: [
-          "personalized travel experiences",
+          "personalized travel",
           "intelligent assistance",
           "passenger information",
-          "entertainment",
-          "journey personalization",
           "smart onboard services"
         ],
-        closingIdea: "Turn travel time into experience time."
+        closingIdea: "TURN TRAVEL INTO EXPERIENCE →"
       }
     ]
   },

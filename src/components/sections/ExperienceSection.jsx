@@ -54,7 +54,7 @@ export default function ExperienceSection() {
 
                 <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-goldChampagne/60">
                   <span>EXP-0{idx + 1}</span>
-                  <span className="group-hover:text-goldBright transition-colors">EN ROUTE →</span>
+                  <span className="group-hover:text-goldBright transition-colors">EN ROUTE → {card.contextPhrase}</span>
                 </div>
               </div>
             );

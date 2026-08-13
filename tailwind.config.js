@@ -45,6 +45,10 @@ export default {
         trackFlow: {
           '0%': { backgroundPosition: '0 0' },
           '100%': { backgroundPosition: '0 100px' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         }
       },
       animation: {
@@ -52,6 +56,7 @@ export default {
         'float-medium': 'float 5s ease-in-out infinite',
         'pulse-gold': 'pulseGlow 3s ease-in-out infinite',
         'track-move': 'trackFlow 2s linear infinite',
+        'fadeIn': 'fadeIn 0.4s ease-in-out',
       }
     },
   },
