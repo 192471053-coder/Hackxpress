@@ -17,8 +17,15 @@ export default function HeroSection() {
         </div>
 
         {/* Cinematic Main Title */}
-        <div className="space-y-4">
-          <h1 style={{ fontSize: 'clamp(2.25rem, 12vw, 12rem)' }} className="font-black font-display tracking-tight text-ivory drop-shadow-2xl leading-none px-2">
+        <div className="space-y-4 w-full">
+          <h1 style={{ 
+            fontSize: 'clamp(2rem, 5.5vw, 6.5rem)',
+            letterSpacing: 'clamp(-0.02em, -0.4vw, -0.08em)',
+            width: '100%',
+            boxSizing: 'border-box',
+            maxWidth: '100%',
+            paddingInline: 'max(1rem, 2vw)'
+          }} className="font-black font-display text-ivory drop-shadow-2xl leading-none mx-auto">
             HACK<span className="text-gold-gradient drop-shadow-[0_0_35px_rgba(245,197,66,0.5)]">XPRESS</span>
           </h1>
           <p className="text-lg sm:text-2xl font-bold tracking-widest text-goldChampagne font-display uppercase">
