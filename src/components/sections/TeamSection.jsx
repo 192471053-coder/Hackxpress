@@ -3,7 +3,7 @@ import { hackxpressConfig } from '../../data/hackxpressConfig';
 import { User, Linkedin, Twitter, Share2 } from 'lucide-react';
 
 export default function TeamSection() {
-  const { heading, members } = hackxpressConfig.team;
+  const { heading, members, facultyConvenors, studentConvenor } = hackxpressConfig.team;
 
   return (
     <section id="team" className="relative py-28 px-4 sm:px-6 z-10">
@@ -19,6 +19,29 @@ export default function TeamSection() {
           <p className="text-sm font-mono tracking-wider text-goldChampagne/80">
             THE LEADERSHIP TEAM DRIVING HACKXPRESS
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="glass-panel p-8 rounded-2xl border border-goldPrimary/25 space-y-5">
+            <h3 className="text-xl font-bold font-display text-goldBright">FACULTY CONVENOR</h3>
+            <div className="space-y-4">
+              {facultyConvenors.map((convenor) => (
+                <div key={convenor.name}>
+                  <div className="text-base font-bold font-display text-ivory">{convenor.name}</div>
+                  <div className="text-xs font-mono text-goldChampagne/70">{convenor.title}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="glass-panel p-8 rounded-2xl border border-goldPrimary/25 space-y-5">
+            <h3 className="text-xl font-bold font-display text-goldBright">STUDENT CONVENOR</h3>
+            <div>
+              <div className="text-base font-bold font-display text-ivory">{studentConvenor.name}</div>
+              <a href={`tel:${studentConvenor.phone}`} className="text-sm font-mono text-goldChampagne hover:text-goldBright transition-colors">
+                {studentConvenor.phone}
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Team Grid */}

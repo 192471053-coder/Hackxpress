@@ -87,7 +87,7 @@ export default function PrizesSection() {
         </div>
 
         {/* Special Award Categories Badges */}
-        <div className="glass-panel p-8 rounded-3xl border border-goldPrimary/30 space-y-6">
+        {specialAwards.length > 0 && <div className="glass-panel p-8 rounded-3xl border border-goldPrimary/30 space-y-6">
           <div className="text-center space-y-2">
             <h4 className="text-xl font-bold font-display text-ivory flex items-center justify-center space-x-2">
               <Star className="w-5 h-5 text-goldBright fill-goldBright" />
@@ -109,7 +109,7 @@ export default function PrizesSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div>}
 
       </div>
     </section>

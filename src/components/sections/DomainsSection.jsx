@@ -50,7 +50,7 @@ export default function DomainsSection() {
                   <div className="flex items-center justify-between">
                     <span className="text-4xl">{domain.symbol}</span>
                     <span className="text-[10px] font-mono text-goldChampagne/70 px-2.5 py-1 rounded bg-obsidian border border-goldPrimary/30">
-                      DOMAIN 0{idx + 1}
+                      DOMAIN {String(idx + 1).padStart(2, '0')}
                     </span>
                   </div>
 

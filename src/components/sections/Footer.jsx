@@ -4,6 +4,8 @@ import { Train, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const { copyright, navLinks } = hackxpressConfig.footer;
+  const { contactEmail } = hackxpressConfig;
+  const { organizerName, organizerLogo } = hackxpressConfig.branding;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,6 +33,22 @@ export default function Footer() {
             <p className="text-xs font-mono text-ivory/60">
               Egmore, Chennai → Pondicherry
             </p>
+            <div className="pt-4 flex flex-col items-center md:items-start gap-2">
+              <span className="text-[10px] font-mono tracking-widest text-goldChampagne/60 uppercase">
+                In association with
+              </span>
+              <img
+                src={organizerLogo}
+                alt={organizerName}
+                className="w-auto max-w-[160px] h-10 object-contain"
+              />
+            </div>
+            <a
+              href={`mailto:${contactEmail}`}
+              className="inline-block text-xs font-mono text-goldChampagne hover:text-goldBright transition-colors break-all"
+            >
+              {contactEmail}
+            </a>
           </div>
 
           {/* Navigation Links */}

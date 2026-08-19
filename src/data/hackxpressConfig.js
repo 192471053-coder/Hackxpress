@@ -1,3 +1,5 @@
+const eventDateLabel = "September 30th";
+
 /**
  * HACKXPRESS - Central Editable Content & Configuration Architecture
  * Organizers can edit dates, fees, prize amounts, registration URLs, team details,
@@ -5,6 +7,8 @@
  */
 
 export const hackxpressConfig = {
+  contactEmail: "hackxpress.simats@gmail.com",
+
   eventMeta: {
     title: "HACKXPRESS",
     subtitle: "TAMIL NADU'S FIRST TRAIN HACKATHON",
@@ -12,7 +16,8 @@ export const hackxpressConfig = {
     route: "EGMORE, CHENNAI → PONDICHERRY",
     subTagline: "ONE TRAIN • ONE JOURNEY • ENDLESS IDEAS",
     // EDITABLE FIELDS BELOW:
-    eventDate: "[ADD DATE]", // Set ISO string or human date e.g. "October 24, 2026" for countdown
+    eventDate: "2026-09-30T00:00:00+05:30",
+    eventDateLabel,
     registrationFee: "[ADD FEE]",
     registrationUrl: "https://forms.gle/93meyStqPx67kUvc8",
     teamSize: "[ADD FINAL TEAM SIZE]",
@@ -26,7 +31,7 @@ export const hackxpressConfig = {
     { label: "Destination", value: "Pondicherry" },
     { label: "Venue", value: "Moving Train" },
     { label: "Participation", value: "Individual / Team" },
-    { label: "Date", value: "[ADD DATE]", editable: true },
+    { label: "Date", value: eventDateLabel, editable: true },
     { label: "Registration Fee", value: "[ADD FEE]", editable: true },
   ],
 
@@ -79,111 +84,191 @@ export const hackxpressConfig = {
     heading: "WHAT WILL YOU HACK?",
     list: [
       {
-        id: "trans",
-        name: "Smart Transportation",
+        id: "ai-ml",
+        name: "Artificial Intelligence & Machine Learning",
         symbol: "🚀",
-        context: "Make railway and public transportation smarter, faster and more efficient.",
+        context: "Explore intelligent systems, machine learning models and AI-powered solutions for real-world challenges.",
         possibleAreas: [
-          "intelligent route optimization",
-          "real-time tracking",
-          "smart scheduling",
-          "predictive transportation systems"
+          "intelligent systems",
+          "machine learning models",
+          "AI-powered solutions"
         ],
-        closingIdea: "THINK SMARTER MOBILITY →"
+        closingIdea: "EXPLORE INTELLIGENT SOLUTIONS →"
       },
       {
-        id: "safe",
-        name: "Passenger Safety",
+        id: "iot",
+        name: "Internet of Things (IoT)",
         symbol: "🛡️",
-        context: "Build solutions that improve passenger safety and help identify or respond to travel risks.",
+        context: "Explore connected devices, sensors and real-time systems that interact with the physical world.",
         possibleAreas: [
-          "emergency detection",
-          "intelligent monitoring",
-          "incident alerts",
-          "risk prediction"
+          "connected devices",
+          "sensors",
+          "real-time systems"
         ],
-        closingIdea: "MAKE EVERY JOURNEY SAFER →"
+        closingIdea: "CONNECT THE PHYSICAL WORLD →"
       },
       {
-        id: "access",
-        name: "Accessibility",
+        id: "web-app",
+        name: "Web & App Development",
         symbol: "♿",
-        context: "Create technology that makes railway travel more inclusive and accessible for people with different needs.",
+        context: "Build useful web and mobile experiences that solve practical problems through modern application development.",
         possibleAreas: [
-          "accessibility assistance",
-          "navigation support",
-          "inclusive interfaces",
-          "assistive technology"
+          "web experiences",
+          "mobile applications",
+          "practical solutions"
         ],
-        closingIdea: "DESIGN FOR EVERYONE →"
+        closingIdea: "BUILD USEFUL EXPERIENCES →"
       },
       {
-        id: "waste",
-        name: "Waste Management",
+        id: "cybersecurity",
+        name: "Cybersecurity",
         symbol: "♻️",
-        context: "Find smarter ways to monitor, reduce, collect and manage waste during railway journeys.",
+        context: "Explore technologies and strategies for protecting systems, networks, applications and data.",
         possibleAreas: [
-          "smart waste monitoring",
-          "waste classification",
-          "collection optimization",
-          "recycling systems"
+          "system protection",
+          "network security",
+          "data protection"
         ],
-        closingIdea: "BUILD A CLEANER JOURNEY →"
+        closingIdea: "PROTECT CONNECTED SYSTEMS →"
       },
       {
-        id: "energy",
-        name: "Energy & Efficiency",
+        id: "data-science",
+        name: "Data Science & Analytics",
         symbol: "⚡",
-        context: "Develop solutions that help railway systems use energy and resources more efficiently.",
+        context: "Turn data into useful insights through analytics, visualization, statistical methods and predictive approaches.",
+        possibleAreas: [
+          "analytics",
+          "visualization",
+          "predictive approaches"
+        ],
+        closingIdea: "TURN DATA INTO INSIGHT →"
+      },
+      {
+        id: "cloud",
+        name: "Cloud Computing",
+        symbol: "📡",
+        context: "Explore scalable applications, cloud infrastructure, distributed systems and cloud-powered solutions.",
+        possibleAreas: [
+          "scalable applications",
+          "cloud infrastructure",
+          "distributed systems"
+        ],
+        closingIdea: "SCALE YOUR SOLUTION →"
+      },
+      {
+        id: "robotics",
+        name: "Robotics & Automation",
+        symbol: "🤖",
+        context: "Build intelligent automated systems that combine software, hardware, sensing and control.",
+        possibleAreas: [
+          "intelligent systems",
+          "sensing and control",
+          "automated hardware"
+        ],
+        closingIdea: "AUTOMATE WITH INTELLIGENCE →"
+      },
+      {
+        id: "embedded",
+        name: "Embedded Systems",
+        symbol: "✨",
+        context: "Develop technology-driven solutions using embedded hardware, microcontrollers and intelligent devices.",
+        possibleAreas: [
+          "embedded hardware",
+          "microcontrollers",
+          "intelligent devices"
+        ],
+        closingIdea: "BUILD INTELLIGENT DEVICES →"
+      },
+      {
+        id: "computer-vision",
+        name: "Computer Vision",
+        symbol: "👁️",
+        context: "Explore systems that understand and interpret images, video and visual information.",
+        possibleAreas: [
+          "image understanding",
+          "video analysis",
+          "visual information"
+        ],
+        closingIdea: "SEE PROBLEMS DIFFERENTLY →"
+      },
+      {
+        id: "smart-mobility",
+        name: "Smart Transportation & Mobility",
+        symbol: "🚆",
+        context: "Develop smarter ways to improve transportation, mobility, routing and movement of people and resources.",
+        possibleAreas: [
+          "transportation",
+          "mobility",
+          "routing and movement"
+        ],
+        closingIdea: "MOVE PEOPLE AND RESOURCES SMARTER →"
+      },
+      {
+        id: "railway-safety",
+        name: "Railway Safety & Security",
+        symbol: "🛡️",
+        context: "Explore technology that can improve railway safety, monitoring, security and incident awareness.",
+        possibleAreas: [
+          "railway safety",
+          "monitoring",
+          "incident awareness"
+        ],
+        closingIdea: "MAKE RAILWAYS SAFER →"
+      },
+      {
+        id: "predictive-maintenance",
+        name: "Predictive Maintenance",
+        symbol: "🔧",
+        context: "Use technology, sensors and data-driven approaches to identify potential equipment or system problems before failure.",
+        possibleAreas: [
+          "sensors",
+          "data-driven monitoring",
+          "early problem detection"
+        ],
+        closingIdea: "ANTICIPATE SYSTEM PROBLEMS →"
+      },
+      {
+        id: "passenger-experience",
+        name: "Passenger Experience & Accessibility",
+        symbol: "♿",
+        context: "Create inclusive and intelligent solutions that make travel more convenient, accessible and user-friendly.",
+        possibleAreas: [
+          "inclusive solutions",
+          "accessible travel",
+          "user-friendly experiences"
+        ],
+        closingIdea: "DESIGN BETTER TRAVEL EXPERIENCES →"
+      },
+      {
+        id: "sustainable-tech",
+        name: "Sustainable Technology",
+        symbol: "♻️",
+        context: "Explore technology that reduces environmental impact and supports efficient and sustainable systems.",
+        possibleAreas: [
+          "environmental impact",
+          "efficient systems",
+          "sustainable technology"
+        ],
+        closingIdea: "BUILD FOR A SUSTAINABLE FUTURE →"
+      },
+      {
+        id: "energy-power",
+        name: "Energy & Power Management",
+        symbol: "⚡",
+        context: "Develop smarter ways to monitor, optimize and manage energy and power consumption.",
         possibleAreas: [
           "energy monitoring",
-          "intelligent power management",
-          "predictive optimization",
-          "resource conservation"
+          "power optimization",
+          "consumption management"
         ],
-        closingIdea: "OPTIMIZE EVERY JOURNEY →"
-      },
-      {
-        id: "connect",
-        name: "Connectivity",
-        symbol: "📡",
-        context: "Improve communication, connectivity and information flow during railway journeys.",
-        possibleAreas: [
-          "passenger connectivity",
-          "real-time information",
-          "intelligent networking",
-          "connected railway systems"
-        ],
-        closingIdea: "CONNECT PEOPLE & SYSTEMS →"
-      },
-      {
-        id: "ai",
-        name: "AI & Automation",
-        symbol: "🤖",
-        context: "Use artificial intelligence and automation to transform railway operations and passenger experiences.",
-        possibleAreas: [
-          "predictive AI",
-          "intelligent assistants",
-          "computer vision",
-          "machine learning",
-          "automated monitoring"
-        ],
-        closingIdea: "MAKE THE JOURNEY SMARTER →"
-      },
-      {
-        id: "exp",
-        name: "Passenger Experience",
-        symbol: "✨",
-        context: "Create technology that makes railway journeys more convenient, personalized and engaging.",
-        possibleAreas: [
-          "personalized travel",
-          "intelligent assistance",
-          "passenger information",
-          "smart onboard services"
-        ],
-        closingIdea: "TURN TRAVEL INTO EXPERIENCE →"
+        closingIdea: "MANAGE POWER MORE SMARTLY →"
       }
     ]
+  },
+
+  branding: {
+    organizerName: "SIMATS Engineering",
+    organizerLogo: "/assets/simats-engineering-logo.png"
   },
 
   phases: {
@@ -226,31 +311,25 @@ export const hackxpressConfig = {
     heading: "BUILD. PITCH. WIN.",
     mainPrizes: [
       {
-        rank: "GRAND WINNER",
-        amount: "[PRIZE AMOUNT]",
+        rank: "1ST PRIZE",
+        amount: "₹10,000",
         perks: ["Trophy", "Certificate"],
         highlight: true
       },
       {
-        rank: "RUNNER-UP",
-        amount: "[PRIZE AMOUNT]",
+        rank: "2ND PRIZE",
+        amount: "₹5,000",
         perks: ["Certificate"],
         highlight: false
       },
       {
-        rank: "SECOND RUNNER-UP",
-        amount: "[PRIZE AMOUNT]",
+        rank: "3RD PRIZE",
+        amount: "₹2,000",
         perks: ["Certificate"],
         highlight: false
       }
     ],
-    specialAwards: [
-      "Best Innovation",
-      "Best AI Solution",
-      "Best Transportation Solution",
-      "Most Creative Idea",
-      "Best UI/UX"
-    ]
+    specialAwards: []
   },
 
   jury: {
@@ -273,6 +352,15 @@ export const hackxpressConfig = {
 
   team: {
     heading: "ORGANIZING TEAM",
+    facultyConvenors: [
+      { name: "Dr. V. K. Gnanavel", title: "Professor" },
+      { name: "Dr. K. Vijayabhaskar", title: "Professor" },
+      { name: "Dr. C. Sivasankar", title: "Professor" }
+    ],
+    studentConvenor: {
+      name: "Logeshwari S",
+      phone: "8148318819"
+    },
     members: [
       { role: "Event Convenor", name: "[CONVENOR NAME]", social: { linkedin: "#", twitter: "#" } },
       { role: "Technical Head", name: "[TECH HEAD NAME]", social: { linkedin: "#", twitter: "#" } },

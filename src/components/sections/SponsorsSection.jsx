@@ -4,6 +4,7 @@ import { Handshake, Shield } from 'lucide-react';
 
 export default function SponsorsSection() {
   const { heading, categories } = hackxpressConfig.sponsors;
+  const { contactEmail } = hackxpressConfig;
 
   return (
     <section id="sponsors" className="relative py-28 px-4 sm:px-6 z-10 bg-obsidian/40">
@@ -63,19 +64,20 @@ export default function SponsorsSection() {
         </div>
 
         {/* Call to Partner Banner */}
-        <div className="glass-panel p-8 rounded-2xl border border-goldPrimary/30 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div className="flex items-center space-x-4">
+        <div className="glass-panel p-8 rounded-2xl border border-goldPrimary/30 flex flex-col sm:flex-row items-center justify-between gap-8 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4 min-w-0">
             <div className="w-12 h-12 rounded-xl bg-goldPrimary/20 border border-goldBright/40 flex items-center justify-center text-goldBright shrink-0">
               <Handshake className="w-6 h-6" />
             </div>
-            <div>
-              <div className="text-base font-bold font-display text-ivory">WANT TO PARTNER WITH HACKXPRESS?</div>
-              <div className="text-xs font-mono text-goldChampagne">Support Tamil Nadu's First Train Hackathon</div>
+            <div className="min-w-0 space-y-1">
+              <div className="text-base font-bold font-display text-ivory leading-snug">WANT TO PARTNER WITH HACKXPRESS?</div>
+              <div className="text-xs font-mono text-goldChampagne leading-relaxed">Support Tamil Nadu's First Train Hackathon</div>
             </div>
           </div>
           <a
-            href={`mailto:sponsor@hackxpress.in?subject=HACKXPRESS%20Sponsorship%20Inquiry`}
-            className="gold-outline-button px-6 py-3 rounded-lg text-xs font-bold font-mono uppercase tracking-wider shrink-0"
+            href={`mailto:${contactEmail}?subject=HACKXPRESS%20Sponsorship%20Inquiry`}
+            className="gold-outline-button px-6 py-3 rounded-lg text-xs font-bold font-mono uppercase tracking-wider shrink-0 whitespace-nowrap"
+            aria-label="Become a sponsor"
           >
             BECOME A SPONSOR
           </a>
