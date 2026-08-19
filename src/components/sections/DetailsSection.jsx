@@ -11,7 +11,7 @@ const iconMap = {
   "Venue": Train,
   "Participation": Users,
   "Date": Calendar,
-  "Registration Fee": Ticket
+  "Entry Fee": Ticket
 };
 
 export default function DetailsSection() {

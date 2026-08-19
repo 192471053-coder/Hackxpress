@@ -18,7 +18,7 @@ export const hackxpressConfig = {
     // EDITABLE FIELDS BELOW:
     eventDate: "2026-09-30T00:00:00+05:30",
     eventDateLabel,
-    registrationFee: "[ADD FEE]",
+    entryFee: "₹1,000",
     registrationUrl: "https://forms.gle/93meyStqPx67kUvc8",
     teamSize: "[ADD FINAL TEAM SIZE]",
     priorExperienceRequired: "[YES/NO]",
@@ -32,7 +32,7 @@ export const hackxpressConfig = {
     { label: "Venue", value: "Moving Train" },
     { label: "Participation", value: "Individual / Team" },
     { label: "Date", value: eventDateLabel, editable: true },
-    { label: "Registration Fee", value: "[ADD FEE]", editable: true },
+    { label: "Entry Fee", value: "₹1,000" },
   ],
 
   experience: {

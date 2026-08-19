@@ -12,7 +12,7 @@ export default function GoldenTicketIntro({ onComplete }) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const timings = prefersReducedMotion
       ? { logo: 250, ticket: 450, scan: 650 }
-      : { logo: 700, ticket: 1500, scan: 2300 };
+      : { logo: 1500, ticket: 3000, scan: 3800 };
 
     const logoFrame = requestAnimationFrame(() => setLogoVisible(true));
     const ticketTimer = setTimeout(() => setPhase('ticket'), timings.logo);
@@ -28,7 +28,7 @@ export default function GoldenTicketIntro({ onComplete }) {
   }, []);
 
   if (phase === 'speed-dial') {
-    return <IntroSpeedDial onComplete={onComplete} duration={1800} />;
+    return <IntroSpeedDial onComplete={onComplete} duration={2800} />;
   }
 
   return (
@@ -76,7 +76,7 @@ export default function GoldenTicketIntro({ onComplete }) {
             </div>
             {phase === 'scan' && (
               <>
-                <div className="absolute left-0 right-0 top-0 h-px bg-goldBright shadow-[0_0_14px_3px_rgba(245,197,66,0.75)] animate-[ticket-scan_900ms_ease-in-out_infinite]" />
+                <div className="absolute left-0 right-0 top-0 h-px bg-goldBright shadow-[0_0_14px_3px_rgba(245,197,66,0.75)] animate-[ticket-scan_1100ms_ease-in-out_infinite]" />
                 <div className="absolute bottom-4 left-0 right-0 text-center text-[9px] tracking-[0.3em] text-goldBright font-mono uppercase">BOARDING VERIFIED</div>
               </>
             )}

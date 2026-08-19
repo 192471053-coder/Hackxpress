@@ -65,7 +65,7 @@ export default function Navbar() {
           <img
             src={hackxpressConfig.branding.organizerLogo}
             alt="SIMATS Engineering"
-            className="w-auto max-w-[72px] h-7 object-contain"
+            className="w-auto max-w-[110px] h-8 px-2 py-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
           />
           <a
             href={hackxpressConfig.eventMeta.registrationUrl}
@@ -79,13 +79,20 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger Toggle */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg bg-obsidian border border-goldPrimary/30 text-goldChampagne hover:text-goldBright"
-          aria-label="Toggle Navigation Menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="sm:hidden flex items-center gap-2">
+          <img
+            src={hackxpressConfig.branding.organizerLogo}
+            alt="SIMATS Engineering"
+            className="w-auto max-w-[78px] h-7 px-1.5 py-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
+          />
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg bg-obsidian border border-goldPrimary/30 text-goldChampagne hover:text-goldBright"
+            aria-label="Toggle Navigation Menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -117,11 +124,6 @@ export default function Navbar() {
             <span>REGISTER NOW</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
-          <img
-            src={hackxpressConfig.branding.organizerLogo}
-            alt="SIMATS Engineering"
-            className="w-auto max-w-[110px] h-7 object-contain mx-auto"
-          />
         </div>
       )}
     </header>
