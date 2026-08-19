@@ -33,15 +33,18 @@ export default function Footer() {
             <p className="text-xs font-mono text-ivory/60">
               Egmore, Chennai → Pondicherry
             </p>
-            <div className="pt-4 flex flex-col items-center md:items-start gap-2">
+            <div className="pt-6 mt-4 border-t border-goldPrimary/20 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
               <span className="text-[10px] font-mono tracking-widest text-goldChampagne/60 uppercase">
-                In association with
+                Organized by
               </span>
               <img
                 src={organizerLogo}
                 alt={organizerName}
-                className="w-auto max-w-[160px] h-10 object-contain"
+                className="w-full max-w-[240px] h-auto object-contain"
               />
+              <span className="text-[10px] font-mono tracking-widest text-goldChampagne/60 uppercase">
+                Institutional Partner
+              </span>
             </div>
             <a
               href={`mailto:${contactEmail}`}
