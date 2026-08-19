@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { hackxpressConfig } from '../../data/hackxpressConfig';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-export default function IntroSpeedDial({ onComplete }) {
+export default function IntroSpeedDial({ onComplete, duration = 3800 }) {
   const [progress, setProgress] = useState(0);
   const [isSkipping, setIsSkipping] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -21,9 +21,9 @@ export default function IntroSpeedDial({ onComplete }) {
     }
 
     let interval;
-    const duration = isSkipping ? 400 : 3800; // 3.8s standard duration, fast skip
+    const activeDuration = isSkipping ? 400 : duration;
     const stepTime = 30;
-    const totalSteps = duration / stepTime;
+    const totalSteps = activeDuration / stepTime;
     let step = 0;
 
     interval = setInterval(() => {

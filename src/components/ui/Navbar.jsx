@@ -62,6 +62,11 @@ export default function Navbar() {
 
         {/* Action Button */}
         <div className="hidden sm:flex items-center space-x-4">
+          <img
+            src={hackxpressConfig.branding.organizerLogo}
+            alt="SIMATS Engineering"
+            className="w-auto max-w-[72px] h-7 object-contain"
+          />
           <a
             href={hackxpressConfig.eventMeta.registrationUrl}
             target="_blank"
@@ -112,6 +117,11 @@ export default function Navbar() {
             <span>REGISTER NOW</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
+          <img
+            src={hackxpressConfig.branding.organizerLogo}
+            alt="SIMATS Engineering"
+            className="w-auto max-w-[110px] h-7 object-contain mx-auto"
+          />
         </div>
       )}
     </header>
