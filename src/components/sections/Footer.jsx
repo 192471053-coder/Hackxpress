@@ -5,7 +5,6 @@ import { Train, ArrowUp } from 'lucide-react';
 export default function Footer() {
   const { copyright, navLinks } = hackxpressConfig.footer;
   const { contactEmail } = hackxpressConfig;
-  const { organizerName, organizerLogo } = hackxpressConfig.branding;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -33,19 +32,6 @@ export default function Footer() {
             <p className="text-xs font-mono text-ivory/60">
               Egmore, Chennai → Pondicherry
             </p>
-            <div className="pt-6 mt-4 border-t border-goldPrimary/20 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
-              <span className="text-[10px] font-mono tracking-widest text-goldChampagne/60 uppercase">
-                Organized by
-              </span>
-              <img
-                src={organizerLogo}
-                alt={organizerName}
-                className="w-full max-w-[240px] h-auto object-contain"
-              />
-              <span className="text-[10px] font-mono tracking-widest text-goldChampagne/60 uppercase">
-                Institutional Partner
-              </span>
-            </div>
             <a
               href={`mailto:${contactEmail}`}
               className="inline-block text-xs font-mono text-goldChampagne hover:text-goldBright transition-colors break-all"

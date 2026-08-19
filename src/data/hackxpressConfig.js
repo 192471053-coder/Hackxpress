@@ -360,15 +360,7 @@ export const hackxpressConfig = {
     studentConvenor: {
       name: "Logeshwari S",
       phone: "8148318819"
-    },
-    members: [
-      { role: "Event Convenor", name: "[CONVENOR NAME]", social: { linkedin: "#", twitter: "#" } },
-      { role: "Technical Head", name: "[TECH HEAD NAME]", social: { linkedin: "#", twitter: "#" } },
-      { role: "Operations Head", name: "[OPERATIONS HEAD]", social: { linkedin: "#", twitter: "#" } },
-      { role: "Marketing Head", name: "[MARKETING HEAD]", social: { linkedin: "#", twitter: "#" } },
-      { role: "Logistics Head", name: "[LOGISTICS HEAD]", social: { linkedin: "#", twitter: "#" } },
-      { role: "Design & Media", name: "[DESIGN LEAD]", social: { linkedin: "#", twitter: "#" } }
-    ]
+    }
   },
 
   rules: {

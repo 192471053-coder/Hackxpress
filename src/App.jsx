@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
 
 import IntroSpeedDial from './components/ui/IntroSpeedDial';
+import SimatsBrandIntro from './components/ui/SimatsBrandIntro';
 import TrainCanvas from './components/3d/TrainCanvas';
 import CustomCursor from './components/ui/CustomCursor';
 import Navbar from './components/ui/Navbar';
@@ -24,6 +25,7 @@ import FinalCTASection from './components/sections/FinalCTASection';
 import Footer from './components/sections/Footer';
 
 export default function App() {
+  const [showSimatsBranding, setShowSimatsBranding] = useState(true);
   const [showIntro, setShowIntro] = useState(true);
   
   // Use refs to avoid unnecessary re-renders and scene re-creation
@@ -74,8 +76,11 @@ export default function App() {
     <div className="relative min-h-screen bg-bgPrimary text-ivory selection:bg-goldPrimary/30 selection:text-goldBright overflow-x-hidden">
       
       {/* Opening Minimal Speed-Dial Boot Screen */}
-      {showIntro && (
-        <IntroSpeedDial onComplete={() => setShowIntro(false)} />
+      {showSimatsBranding ? (
+        <SimatsBrandIntro onComplete={() => setShowSimatsBranding(false)} />
+      ) : (
+        /* Opening Minimal Speed-Dial Boot Screen */
+        showIntro && <IntroSpeedDial onComplete={() => setShowIntro(false)} />
       )}
 
       {/* 3D WebGL Futuristic Train & Track Canvas */}
