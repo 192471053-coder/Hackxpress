@@ -338,18 +338,6 @@ export const hackxpressConfig = {
     confirmedJury: []
   },
 
-  sponsors: {
-    heading: "SPONSORS & PARTNERS",
-    categories: [
-      { name: "Title Sponsor", items: [{ name: "Sponsor Partner", logo: null }] },
-      { name: "Technology Partner", items: [{ name: "Tech Partner", logo: null }] },
-      { name: "Education Partner", items: [{ name: "Edu Partner", logo: null }] },
-      { name: "Travel/Logistics Partner", items: [{ name: "Logistics Partner", logo: null }] },
-      { name: "Media Partner", items: [{ name: "Media Partner", logo: null }] },
-      { name: "Community Partner", items: [{ name: "Community Partner", logo: null }] }
-    ]
-  },
-
   team: {
     heading: "ORGANIZING TEAM",
     facultyConvenors: [
@@ -448,7 +436,6 @@ export const hackxpressConfig = {
       { name: "Timeline", href: "#phases" },
       { name: "Prizes", href: "#prizes" },
       { name: "Jury", href: "#jury" },
-      { name: "Sponsors", href: "#sponsors" },
       { name: "FAQ", href: "#faq" },
       { name: "Rules", href: "#rules" }
     ]

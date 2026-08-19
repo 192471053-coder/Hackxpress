@@ -11,7 +11,7 @@ export default function RulesSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 11 — GOVERNANCE & PROTOCOLS</div>
+          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 10 — GOVERNANCE & PROTOCOLS</div>
           <h2 className="text-4xl sm:text-6xl font-extrabold font-display text-ivory tracking-tight">
             {heading}
           </h2>

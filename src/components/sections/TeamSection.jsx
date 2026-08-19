@@ -10,7 +10,7 @@ export default function TeamSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 10 — ORGANIZERS & LEADS</div>
+          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 09 — ORGANIZERS & LEADS</div>
           <h2 className="text-4xl sm:text-6xl font-extrabold font-display text-ivory tracking-tight">
             {heading}
           </h2>

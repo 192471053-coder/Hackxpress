@@ -16,7 +16,7 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 13 — INQUIRIES & HELP</div>
+          <div className="text-xs font-mono tracking-widest text-goldBright uppercase">SECTION 12 — INQUIRIES & HELP</div>
           <h2 className="text-4xl sm:text-6xl font-extrabold font-display text-ivory tracking-tight">
             {heading}
           </h2>

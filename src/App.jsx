@@ -16,7 +16,7 @@ import PhasesSection from './components/sections/PhasesSection';
 import DetailsSection from './components/sections/DetailsSection';
 import PrizesSection from './components/sections/PrizesSection';
 import JurySection from './components/sections/JurySection';
-import SponsorsSection from './components/sections/SponsorsSection';
+import SponsorCTASection from './components/sections/SponsorCTASection';
 import TeamSection from './components/sections/TeamSection';
 import RulesSection from './components/sections/RulesSection';
 import SafetySection from './components/sections/SafetySection';
@@ -105,7 +105,7 @@ export default function App() {
         <DetailsSection />
         <PrizesSection />
         <JurySection />
-        <SponsorsSection />
+        <SponsorCTASection />
         <TeamSection />
         <RulesSection />
         <SafetySection />
