@@ -342,8 +342,8 @@ export const hackxpressConfig = {
     heading: "ORGANIZING TEAM",
     facultyConvenors: [
       { name: "Dr. V. K. Gnanavel", title: "Professor" },
-      { name: "Dr. K. Vijayabhaskar", title: "Professor" },
-      { name: "Dr. C. Sivasankar", title: "Professor" }
+      { name: "Dr. C. Sivasankar", title: "Professor" },
+      { name: "Dr. K. Vijayabhaskar", title: "Professor" }
     ],
     studentConvenor: {
       name: "Logeshwari S",

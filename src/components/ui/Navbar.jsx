@@ -65,7 +65,7 @@ export default function Navbar() {
           <img
             src={hackxpressConfig.branding.organizerLogo}
             alt="SIMATS Engineering"
-            className="w-auto max-w-[110px] h-8 px-2 py-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
+            className="block w-[clamp(90px,8vw,120px)] max-w-[24vw] h-auto max-h-9 p-1.5 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner hover:shadow-gold-glow transition-shadow"
           />
           <a
             href={hackxpressConfig.eventMeta.registrationUrl}
@@ -83,7 +83,7 @@ export default function Navbar() {
           <img
             src={hackxpressConfig.branding.organizerLogo}
             alt="SIMATS Engineering"
-            className="w-auto max-w-[78px] h-7 px-1.5 py-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
+            className="block w-[clamp(65px,19vw,85px)] max-w-[23vw] h-auto max-h-8 p-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner hover:shadow-gold-glow transition-shadow"
           />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
