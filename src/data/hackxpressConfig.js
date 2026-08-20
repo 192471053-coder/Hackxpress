@@ -268,7 +268,8 @@ export const hackxpressConfig = {
 
   branding: {
     organizerName: "SIMATS Engineering",
-    organizerLogo: "/assets/simats-engineering-logo.png"
+    organizerLogo: "/assets/simats-engineering-logo.png",
+    eventLogo: "/assets/hackexpress logo.jpeg"
   },
 
   phases: {

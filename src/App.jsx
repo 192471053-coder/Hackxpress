@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Lenis from '@studio-freight/lenis';
 
 import GoldenTicketIntro from './components/ui/GoldenTicketIntro';
+import RouteEmblem from './components/ui/RouteEmblem';
 import TrainCanvas from './components/3d/TrainCanvas';
 import CustomCursor from './components/ui/CustomCursor';
 import Navbar from './components/ui/Navbar';
@@ -25,6 +26,17 @@ import Footer from './components/sections/Footer';
 
 export default function App() {
   const [showIntro, setShowIntro] = useState(true);
+  const [emblemPhase, setEmblemPhase] = useState('hidden');
+  
+  const handleEmblemPhase = useCallback((phase) => {
+    setEmblemPhase(phase);
+  }, []);
+
+  const handleIntroComplete = useCallback(() => {
+    setEmblemPhase('settling');
+    setShowIntro(false);
+    setTimeout(() => setEmblemPhase('persistent'), 900);
+  }, []);
   
   // Use refs to avoid unnecessary re-renders and scene re-creation
   const scrollProgressRef = useRef(0);
@@ -74,7 +86,15 @@ export default function App() {
     <div className="relative min-h-screen bg-bgPrimary text-ivory selection:bg-goldPrimary/30 selection:text-goldBright overflow-x-hidden">
       
       {/* Unified SIMATS ticket and HACKXPRESS speed-dial opening */}
-      {showIntro && <GoldenTicketIntro onComplete={() => setShowIntro(false)} />}
+      {showIntro && (
+        <GoldenTicketIntro
+          onComplete={handleIntroComplete}
+          onEmblemPhase={handleEmblemPhase}
+        />
+      )}
+
+      {/* Persistent HACKXPRESS event emblem — independent layer */}
+      <RouteEmblem phase={emblemPhase} />
 
       {/* 3D WebGL Futuristic Train & Track Canvas */}
       <TrainCanvas scrollProgressRef={scrollProgressRef} mousePosRef={mousePosRef} />
