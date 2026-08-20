@@ -3,57 +3,37 @@ import { ArrowRight, Train } from 'lucide-react';
 import { hackxpressConfig } from '../../data/hackxpressConfig';
 import IntroSpeedDial from './IntroSpeedDial';
 
-export default function GoldenTicketIntro({ onComplete, onEmblemPhase }) {
-  const [phase, setPhase] = useState('event-logo');
+export default function GoldenTicketIntro({ onComplete }) {
+  const [phase, setPhase] = useState('logo');
   const [logoVisible, setLogoVisible] = useState(false);
   const { organizerLogo } = hackxpressConfig.branding;
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const timings = prefersReducedMotion
-      ? { eventLogo: 400, logo: 650, ticket: 850, scan: 1050 }
-      : { eventLogo: 1800, logo: 3300, ticket: 4800, scan: 5600 };
-
-    onEmblemPhase?.('intro-reveal');
-
-    const eventLogoTimer = setTimeout(() => {
-      onEmblemPhase?.('hidden');
-      setPhase('logo');
-    }, timings.eventLogo);
+      ? { logo: 250, ticket: 450, scan: 650 }
+      : { logo: 1500, ticket: 3000, scan: 3800 };
 
     const logoFrame = requestAnimationFrame(() => setLogoVisible(true));
     const ticketTimer = setTimeout(() => setPhase('ticket'), timings.logo);
     const scanTimer = setTimeout(() => setPhase('scan'), timings.ticket);
-    const speedDialTimer = setTimeout(() => {
-      onEmblemPhase?.('speed-dial');
-      setPhase('speed-dial');
-    }, timings.scan);
+    const speedDialTimer = setTimeout(() => setPhase('speed-dial'), timings.scan);
 
     return () => {
       cancelAnimationFrame(logoFrame);
-      clearTimeout(eventLogoTimer);
       clearTimeout(ticketTimer);
       clearTimeout(scanTimer);
       clearTimeout(speedDialTimer);
     };
-  }, [onEmblemPhase]);
+  }, []);
 
   if (phase === 'speed-dial') {
-    return (
-      <IntroSpeedDial
-        onComplete={onComplete}
-        duration={2800}
-      />
-    );
+    return <IntroSpeedDial onComplete={onComplete} duration={2800} />;
   }
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-hidden bg-bgPrimary px-4 sm:px-8">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08),transparent_42%)] pointer-events-none" />
-
-      {phase === 'event-logo' && (
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06),transparent_50%)] pointer-events-none animate-[fade-in_1s_ease-out]" />
-      )}
 
       {phase === 'logo' && (
         <div className={`relative flex flex-col items-center gap-4 text-center transition-all duration-700 ease-out ${logoVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-[0.94]'}`}>

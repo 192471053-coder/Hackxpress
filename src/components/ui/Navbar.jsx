@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { hackxpressConfig } from '../../data/hackxpressConfig';
-import { Train, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,24 +22,25 @@ export default function Navbar() {
           : 'py-5 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a href="#hero" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-lg bg-obsidian border border-goldPrimary/40 flex items-center justify-center text-goldBright group-hover:border-goldBright group-hover:shadow-gold-glow transition-all duration-300">
-            <Train className="w-5 h-5 text-goldBright animate-pulse-gold" />
-          </div>
-          <div>
-            <span className="text-xl font-extrabold tracking-wider text-ivory group-hover:text-goldBright transition-colors font-display">
-              HACK<span className="text-goldBright">XPRESS</span>
-            </span>
-            <div className="text-[10px] tracking-widest text-goldChampagne/70 font-mono hidden sm:block">
-              TN'S FIRST TRAIN HACKATHON
-            </div>
-          </div>
-        </a>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 min-w-0">
+        {/* Event + institution logos */}
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0 shrink">
+          <a href="#hero" className="shrink-0">
+            <img
+              src={hackxpressConfig.branding.eventLogo}
+              alt="HACKXPRESS"
+              className="block w-[clamp(60px,18vw,85px)] sm:w-[clamp(90px,9vw,140px)] h-auto max-h-10 sm:max-h-12 object-contain"
+            />
+          </a>
+          <img
+            src={hackxpressConfig.branding.organizerLogo}
+            alt="SIMATS Engineering"
+            className="block w-[clamp(55px,16vw,75px)] sm:w-[clamp(90px,8vw,120px)] max-w-[22vw] sm:max-w-[24vw] h-auto max-h-8 sm:max-h-9 p-1 sm:p-1.5 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
+          />
+        </div>
 
         {/* Train Route Ticker (Center Badge) */}
-        <div className="hidden md:flex items-center space-x-2 px-4 py-1.5 rounded-full bg-obsidian/80 border border-goldPrimary/25 text-xs font-mono text-goldChampagne shadow-gold-inner">
+        <div className="hidden xl:flex items-center space-x-2 px-4 py-1.5 rounded-full bg-obsidian/80 border border-goldPrimary/25 text-xs font-mono text-goldChampagne shadow-gold-inner shrink-0">
           <span className="inline-block w-2 h-2 rounded-full bg-goldBright animate-ping" />
           <span>ROUTE: EGMORE, CHENNAI</span>
           <span className="text-goldBright font-bold">→</span>
@@ -47,7 +48,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium shrink-0">
           {hackxpressConfig.footer.navLinks.slice(0, 7).map((link, idx) => (
             <a
               key={idx}
@@ -60,31 +61,16 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Action Button */}
-        <div className="hidden sm:flex items-center space-x-4">
-          <img
-            src={hackxpressConfig.branding.organizerLogo}
-            alt="SIMATS Engineering"
-            className="block w-[clamp(90px,8vw,120px)] max-w-[24vw] h-auto max-h-9 p-1.5 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner hover:shadow-gold-glow transition-shadow"
-          />
+        <div className="flex items-center gap-2 sm:gap-4 shrink-0">
           <a
             href={hackxpressConfig.eventMeta.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="gold-glow-button px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5"
+            className="hidden sm:flex gold-glow-button px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase font-bold items-center space-x-1.5"
           >
             <span>REGISTER NOW</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
-        </div>
-
-        {/* Mobile Hamburger Toggle */}
-        <div className="sm:hidden flex items-center gap-2">
-          <img
-            src={hackxpressConfig.branding.organizerLogo}
-            alt="SIMATS Engineering"
-            className="block w-[clamp(65px,19vw,85px)] max-w-[23vw] h-auto max-h-8 p-1 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner hover:shadow-gold-glow transition-shadow"
-          />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg bg-obsidian border border-goldPrimary/30 text-goldChampagne hover:text-goldBright"
