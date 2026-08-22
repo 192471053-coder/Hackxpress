@@ -23,21 +23,14 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 min-w-0">
-        {/* Event + institution logos */}
-        <div className="flex items-center gap-2 sm:gap-3 min-w-0 shrink">
-          <a href="#hero" className="shrink-0">
-            <img
-              src={hackxpressConfig.branding.eventLogo}
-              alt="HACKXPRESS"
-              className="block w-[clamp(60px,18vw,85px)] sm:w-[clamp(90px,9vw,140px)] h-auto max-h-10 sm:max-h-12 object-contain"
-            />
-          </a>
+        {/* SIMATS Engineering Logo */}
+        <a href="#hero" className="flex items-center shrink-0" aria-label="SIMATS Engineering">
           <img
             src={hackxpressConfig.branding.organizerLogo}
             alt="SIMATS Engineering"
-            className="block w-[clamp(55px,16vw,75px)] sm:w-[clamp(90px,8vw,120px)] max-w-[22vw] sm:max-w-[24vw] h-auto max-h-8 sm:max-h-9 p-1 sm:p-1.5 object-contain rounded-md bg-obsidian/80 border border-goldPrimary/25 shadow-gold-inner"
+            className="block w-[100px] sm:w-[150px] md:w-[180px] h-auto object-contain transition-opacity duration-300"
           />
-        </div>
+        </a>
 
         {/* Train Route Ticker (Center Badge) */}
         <div className="hidden xl:flex items-center space-x-2 px-4 py-1.5 rounded-full bg-obsidian/80 border border-goldPrimary/25 text-xs font-mono text-goldChampagne shadow-gold-inner shrink-0">
